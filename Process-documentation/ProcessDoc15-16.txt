@@ -1,0 +1,64 @@
+This year, try to get an umbrella procedure document for the whole ARL process
+
+ARL annual questionnaire
+Collection Stats 
+C:\Users\crawfotj\Box Sync\arl\15-16
+
+
+Q1 Titles (all formats)
+Q2 Vols. held (traditional definition of "vol")
+Q2 Footnotes ... Adjustments, and list of our 003 Collections
+Q4
+
+Bill is writing scripts to automate portions pf the process
+
+Set up documents and spreadsheets 
+List of various spreadsheets and documents from 14-15. 
+
+Worksheet doc for Dan Q1 Titles, Q2 Vols. (and Footnote), Q4 Ebooks
+Worksheet doc for Dan Special Collections Q1 and Q2.
+
+Folder of the 3 ARL documents  C:\Users\crawfotj\Box Sync\arl\15-16\ARL_documents
+
+Folder of Calculation spreadsheets C:\Users\crawfotj\Box Sync\arl\15-16\Calculation_spreadsheets
+
+
+Q1 Process  
+C:\Users\crawfotj\Box Sync\arl\15-16\Q1
+C:\Users\crawfotj\Box Sync\arl\15-16\Q1\Process1
+
+	separate folders by format, each folder has 3 SQL files (queries)
+	for each query in each folder: write results to .csv files, 
+	process.sh produces "count.txt" files
+	it's important to be consistent in naming conventions. 
+
+	Then count_arl-q1.rb collects the totals and writes to "arl-tally.txt"
+	For the time being, add the info from "arl-tally" to Calculations spreadsheet
+
+Q2 Process
+C:\Users\crawfotj\Box Sync\arl\15-16\Q2
+
+	The search for UL Q2 now resides on http://lucy.libraries.uc.edu/qc/arl.html 
+
+	It includes all relevant I Types, old process pts. 1, 2 (99), and 3 (22 and 72) 
+	N.B.It does include I Type 22, 72, 99
+
+Q2 Footnote
+C:\Users\crawfotj\Box Sync\arl\15-16\Q2\003 Batch collections footnote
+	003_count_15-16.sql  two passes, 
+	write passes to .csv files 
+	pass1 -- all formats
+	pass2 -- limited to bcode2 = 'a' or 't'
+	if the query is not run early in July, may need to adjust for "Pull and replace" collections
+
+	use q2_15-16_footnote.xlsx to prepare footnote; transfer info to Calculations spreadsheet.
+
+Q4 Process 
+
+
+Separate questionnaires for Special Collections. 
+Q1 and Q2. 
+For Q1, see 
+C:\Users\crawfotj\Box Sync\arl\15-16\Q1\Special_Collections_survey_(q1)
+Important instructions in "SPEC_COL_Q1_ScratchPad.txt" "spec_coll_totals_[date].txt" and "SpecColl-process.txt"
+

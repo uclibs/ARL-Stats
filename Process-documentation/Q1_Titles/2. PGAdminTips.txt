@@ -1,0 +1,101 @@
+PQadmin tips 
+
+Table 9.1. Comparison Operators
+
+Operator	Description
+<	less than
+>	greater than
+<=	less than or equal to
+>=	greater than or equal to
+=	equal
+<> or !=	not equal
+
+
+bcode2 values
+( 1) Monograph	a, t	AND (i.bcode2 = 'a' OR i.bcode2 = 't')) -- Bib format here
+( 2) Serial	s	AND i.bcode2 = 's' ) -- Bib format here
+( 3) Score	c-d	AND (i.bcode2 = 'c' OR i.bcode2 = 'd')) -- Bib format here
+( 4) Map	e-f	AND (i.bcode2 = 'e' OR i.bcode2 = 'f')) -- Bib format here
+( 5) Audio	i, j	AND (i.bcode2 = 'i' OR i.bcode2 = 'j')) -- Bib format here
+( 6) Projected	g	AND i.bcode2 = 'g' ) -- Bib format here
+( 7) 2-D object	k	AND i.bcode2 = 'k' ) -- Bib format here
+( 8) E-Resource	m **	AND (i.bcode2 = 'm') -- Bib format here
+( 9) Mixed 	p 	AND i.bcode2 = 'p') -- Bib format here
+(10) Microform	h, v	AND (i.bcode2 = 'h' OR i.bcode2 = 'v')) -- Bib format here
+
+( 1) Monograph	a, t	AND (i.bcode2 = 'a' OR i.bcode2 = 't')) -- Bib format here
+( 3) Score	c-d	AND (i.bcode2 = 'c' OR i.bcode2 = 'd')) -- Bib format here
+( 4) Map	e-f	AND (i.bcode2 = 'e' OR i.bcode2 = 'f')) -- Bib format here
+( 5) Audio	i, j	AND (i.bcode2 = 'i' OR i.bcode2 = 'j')) -- Bib format here
+
+( 2) Serial	s	AND i.bcode2 = 's' ) -- Bib format here
+( 6) Projected	g	AND i.bcode2 = 'g' ) -- Bib format here
+( 7) 2-D object	k	AND i.bcode2 = 'k' ) -- Bib format here
+( 8) E-Resource	m **	AND (i.bcode2 = 'm') -- Bib format here
+( 9) Mixed 	p 	AND i.bcode2 = 'p') -- Bib format here
+(10) Microform	h, v	AND (i.bcode2 = 'h' OR i.bcode2 = 'v')) -- Bib format here
+
+Bib record number ranges 
+BIBLIOGRAPHIC  RECORD #  less than  "b1.000.000" = zero
+
+Patterns for formats which require multiple passes: 
+     -- AND i.record_num between '1000000' and '2000000' -- valid syntax, but expensive
+     -- AND i.record_num >= '2000000' -- use descriptors on two lines 
+     -- AND i.record_num < '3000000'  -- use descriptors on two lines 
+     -- AND i.record_num >= '3000000'
+     -- AND i.record_num < '4000000'
+     -- AND i.record_num >= '4000000'
+     -- AND i.record_num < '5000000'
+     -- AND i.record_num >= '5000000'
+     -- AND i.record_num < '6000000'
+     -- AND i.record_num >= '6000000'
+     -- AND i.record_num < '7000000'
+
+    AND i.record_num >= '1000000' -- valid syntax, useful when a single pass is sufficient
+
+    AND i.record_num < '2000000' -- add second line to set range; could be any number
+    -- AND i.record_num >= '2000000' -- pass 2
+    -- AND i.record_num < '3000000'
+    -- AND i.record_num >= '3000000' -- pass 3
+    -- AND i.record_num < '4000000'
+    -- AND i.record_num >= '4000000' -- pass 4
+    -- AND i.record_num < '5000000'    
+    -- AND i.record_num >= '5000000' -- pass 5
+    -- AND i.record_num < '6000000'  
+
+
+    -- AND i.record_num <= '2000000' -- pass 1
+    -- AND i.record_num >= '2000001' -- pass 2
+    -- AND i.record_num < '4000000' 
+    -- AND i.record_num >= '4000001' -- pass 3 if three passes are sufficient 
+    -- AND i.record_num >= '4000001' -- pass 3 when needed (e.g., mono)
+    -- AND i.record_num < '5000000' 
+    -- AND i.record_num >= '5000000' -- pass 4 for mono 
+
+Some formats require only one pass
+    AND i.record_num >= '1000000' 
+
+
+q1_set1_mono_pass1.csv
+q1_set2_mono_pass1.csv
+q1_set3_mono_pass1.csv
+
+q1_set2_buar_mono_pass1.csv
+q1_set3_buar_mono_pass1.csv
+
+????
+Item record number ranges 
+ITEM RECORD#  less than  "b1.000.000" = zero
+
+Patterns for formats which require multiple passes: 
+     -- AND itemview.record_num between '1000000' and '2000000' -- valid syntax, but expensive
+     -- AND i.record_num >= '2000000' -- use descriptors on two lines 
+     -- AND i.record_num < '3000000'  -- use descriptors on two lines 
+     -- AND i.record_num >= '3000000'
+     -- AND i.record_num < '4000000'
+     -- AND i.record_num >= '4000000'
+     -- AND i.record_num < '5000000'
+     -- AND i.record_num >= '5000000'
+     -- AND i.record_num < '6000000'
+     -- AND i.record_num >= '6000000'
+     -- AND i.record_num < '7000000'

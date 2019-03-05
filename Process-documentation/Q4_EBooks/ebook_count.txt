@@ -1,0 +1,16 @@
+ARL 13-14, Question 4.  Number of ebooks
+
+ARL 12-13  Total query runtime: 561933 ms.
+1,352,175 rows retrieved.
+
+ARL 13-14  Total query runtime: 525821 ms.
+  902,585 rows retrieved
+
+The drop is due primarily to removing the SerSet records, and a couple of collections which "deduped"   
+
+
+ARL 14-15 
+  980,326 rows retrieved
+
+ARL 15-16
+1,019,440 rows retrieveds

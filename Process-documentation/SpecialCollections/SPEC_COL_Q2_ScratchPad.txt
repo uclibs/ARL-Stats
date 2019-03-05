@@ -1,0 +1,20 @@
+SPEC_COL_Q2_ScratchPad
+
+Vol. held for BUAR, BUCB (Oesper), and BHY (Winkler) 
+
+Use queries 
+ARL_q2_BUAR.sql
+ARL_q2_Oesper.sql
+ARL_q2_Winkler.sql
+ARL_q2_Winkler-realia.sql
+
+run the query, do not output to file. 
+copy the results to "q2_spec_col_vols_count.txt"
+	(currently, the file is cumulative)
+
+BUAR results include I Type 37, Archival boxes attached to CAT bibs.
+Do not include item records suppressed to "s"
+Copy and revise notes from q2_spec_col for process 
+
+
+

@@ -1,0 +1,20 @@
+Special Collection survey folders do not have process-format subfolders folders, 
+the process shell script used elsewhere could potentially dedup title strings between two different formats.
+
+Instead, run sort+uniq  [sort -u [filename] |wc -l] on files? 
+                                     (LC_ALL=C sort -i -u q1_set1* | wc -l)
+
+
+more notes in cygwin tips.txt 
+For the Special Collections, since most formats will require a single pass of set2 and set3, write the results file to same folder as the queries. 
+For monographs, or any other that requires joining files, move .csv files to subfolder and join use "cat" 
+$ cat *csv > q1_set2_buar_mono_catALL.csv
+
+copy or move joined file to main folder, and on each .csv file
+$ sort -u q1_set2_buar_mono_catAll.csv | wc -l
+
+copy and paste output to BUAR_ARL_13-14_q1_count.txt
+q1_set2_buar_mono_catAll.csv | wc -l 52163
+
+52163	q1_set2_buar_mono_catAll.csv
+

@@ -1,0 +1,54 @@
+bring up the cygwin window, change directory 
+
+cd/cygdrive/c/Users/crawfotj/Box Sync/ARL_Calculations/ARL_UCL_2014-2015/ARL14-15_Question_1_Titles_held/Process1/1_monographs
+
+$ cd /cygdrive/c/Users/crawfotj/Box\ Sync/arl
+
+
+C:\Users\crawfotj\Box Sync\arl\14-15\Q1\Special_Collections_survey_(q1)\special-coll_BUAR_Q1
+C:\Users\crawfotj\Box Sync\arl\14-15\Q1\Special_Collections_survey_(q1)\special-coll_BUAR_Q1
+
+cd .. to go up one level 
+cd /cygdrive/C/Users/crawfotj/Documents/crawfotj/Dropbox/ARL_Calculations/UCL_2013-2014/Question_1/Process1/
+
+When working at home
+cd /cygdrive/C/Users/RavenWing/Documents/Dropbox/ARL_Calculations/UCL_2013-2014/Question_1/Process1/special-coll_BUAR_Q1/Restrictive
+
+
+cd /cygdrive/C/Users/crawfotj/documents/crawfotj/dropbox
+
+cd /cygdrive/C/Users/crawfotj/Documents/crawfotj/Dropbox/ARL_Calculations/UCL_2013-2014/Question_1/process1/1_monographs
+cd /cygdrive/C/Users/crawfotj/Documents/crawfotj/Dropbox/ARL_Calculations/UCL_2013-2014/Question_1/Process1/1_monographs
+
+in each folder under "Process" run shell script from cygwin in the appropriate folder
+at command prompt: $ sh process.sh          to run process on all the .csv files in the folder 
+
+
+
+
+
+C:\Users\crawfotj\Documents\crawfotj\Dropbox\ARL_Calculations\UCL_2013-2014\Question_1\Process1\special-coll_BUAR_Q1
+C:\Users\crawfotj\Documents\crawfotj\Dropbox\ARL_Calculations\UCL_2013-2014\Question_1\Process1\special-coll_BUCB_Oesper_Q1
+C:\Users\crawfotj\Documents\crawfotj\Dropbox\ARL_Calculations\UCL_2013-2014\Question_1\Process1\special-coll_Winkler_Q1
+
+
+For the Special Collections, since most formats will require a single pass of set2 and set3, write the results file to same folder as the queries. 
+For monographs, or any other that requires joining files, move .csv files to subfolder and join use "cat" 
+$ cat *csv > q1_set2_buar_mono_catALL.csv
+
+copy or move joined file to main folder, and on each .csv file
+$ sort -u q1_set2_buar_mono_catAll.csv | wc -l
+
+copy and paste output to BUAR_ARL_13-14_q1_count.txt
+q1_set2_buar_mono_catAll.csv | wc -l 52163
+
+52163	q1_set2_buar_mono_catAll.csv
+
+
+
+
+
+
+
+
+
