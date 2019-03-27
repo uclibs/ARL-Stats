@@ -1,0 +1,21 @@
+Tally run on 2018-10-12
+q1_set2-oesper_audio_pass1.csv : 1
+q1_set2-oesper_eresource_pass1.csv : 1
+q1_set2-oesper_graphic_pass1.csv : 7
+q1_set2-oesper_mono_combined.csv : 10408
+q1_set2-oesper_projected_pass1.csv : 8
+q1_set2-oesper_serial_pass1.csv : 213
+q1_set3-oesper_mono_pass1.csv : 73
+q1_set3-oesper_serial_pass1.csv : 59
+total: 10770
+
+Tally run on 2018-10-12
+q1_set2-oesper_audio_pass1.csv	1
+q1_set2-oesper_eresource_pass1.csv	1
+q1_set2-oesper_graphic_pass1.csv	7
+q1_set2-oesper_mono_combined.csv	10408
+q1_set2-oesper_projected_pass1.csv	8
+q1_set2-oesper_serial_pass1.csv	213
+q1_set3-oesper_mono_pass1.csv	73
+q1_set3-oesper_serial_pass1.csv	59
+total: 10770

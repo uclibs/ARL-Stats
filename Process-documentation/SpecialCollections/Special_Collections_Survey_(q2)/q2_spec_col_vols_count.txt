@@ -1,0 +1,105 @@
+2016-2017
+
+
+BUAR_q2 vols - Archival boxes the query misses.
+Total query runtime: 19685 ms.
+94788 rows retrieved.
+
+Working in SIERRA Lists, find the number of Archival boxes, and their Titles. 
+Create Item list of I Type 37 (saved in JSON) 
+1			i	61	=	37		
+2	A		i	83	<=	06-30-2016	  -  -  	
+3	A	(	i	79	^	uar		
+4	O	(	i	79	^	tdp		
+5	A		i	97	H	u		))
+
+In Global Update, find the number of I Type 37 included in the buar q2 query: 
+BIB CAT DATE Exists, less than 7/1/16, not suppressed to "s" or "d"
+8868 boxes
+
+The remaining 2279 boxes are attached to 52 unsuppressed bibs with no CAT DATE: 
+
+
+
+OESPER_q2_vols
+Total query runtime: 12984 ms.
+19460 rows retrieved.
+
+WINKLER_q2_vols
+Total query runtime: 582 ms
+10974 rows rows retrieved
+
+WINKLER-q2 realia
+Total query runtime: 56 ms.
+828 rows retrieved.
+
+
+
+________________________________
+2015-16
+
+
+BUAR_q2 vols
+Total query runtime: 19685 ms.
+93669 rows retrieved.
+
+Working in SIERRA Lists, find the number of Archival boxes, and their Titles. 
+Create Item list of I Type 37 (saved in JSON) 
+1			i	61	=	37		
+2	A		i	83	<=	06-30-2016	  -  -  	
+3	A	(	i	79	^	uar		
+4	O	(	i	79	^	tdp		
+5	A		i	97	H	u		))
+
+In Global Update, find the number of I Type 37 included in the buar q2 query: 
+BIB CAT DATE Exists, less than 7/1/16, not suppressed to "s" or "d"
+
+8856 boxes
+
+The remaining 2279 boxes are attached to 127 unsuppressed bibs with no CAT DATE: 
+
+
+
+OESPER_q2_vols
+Total query runtime: 12984 ms.
+19517 rows retrieved.
+
+WINKLER_q2_vols
+Total query runtime: 582 ms
+10337 rows rows retrieved
+
+
+
+WINKLER-q2 realia
+Total query runtime: 56 ms.
+828 rows retrieved.
+
+________________________________
+
+2014-15
+BUAR_q2_vols	93243
+
+OESPER_q2_vols	19486
+
+Winkler_q2_vols	10078
+
+Winkler_q2_realia 884	
+
+————————————————————————————————
+2014
+BUAR_q2_vols 	88500
+includes archival boxes attached to cataloged, unsuppressed bibs; 
+add additional 1578 
+
+90,078 items, of which 5955 are archival boxes 
+84123 
+
+OESPER_q2_vols	19367 
+
+Winkler_q2_vols	9832
+Winkler_q2_realia	  828
+
+On Mon., 10/20/14 
+BUAR_q2_vols	88564 rows retrieved when icode2 != "s" 
+
+BUAR_q2_vols	 

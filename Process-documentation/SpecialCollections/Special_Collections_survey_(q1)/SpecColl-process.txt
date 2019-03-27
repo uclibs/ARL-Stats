@@ -1,0 +1,16 @@
+This file has been imcompletely edited ... 
+
+
+Special Collection survey folders do not have process-format subfolders folders, 
+the process shell script used elsewhere could potentially dedup title strings between two different formats.
+
+For the Special Collections, since most formats will require a single pass of set2 and set3, write the results file to same folder as the queries. But for monographs, or any other that requires joining files, move .csv files to subfolder and join using Windows command "copy *csv combined.csv" 
+
+Change into directory: cd C:\Users\crawfotj\Box Sync\arl\16-17\Q1\Special_Collections_survey_(q1)\special-coll_BUAR_Q1\Restrictive>
+
+at cmd prompt: copy *csv combined.csv 
+
+rename file as appropriate, move joined file to main folder
+
+Bill has created a Ruby script that will run on all the .csv files in folder and print to file 
+

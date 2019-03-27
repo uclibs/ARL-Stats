@@ -1,0 +1,68 @@
+Name: MAT TYPE	(BCode 2, from OCLC Fixed Field, Type of Record)
+
+Valid Codes:	
+a	Book
+c	Score
+d	Score
+e	Map
+f	Map
+g	Proj medium
+h	Micro
+i	Spoken audio
+j	Music audio
+k	2-D
+m	Computer file
+n	Instruct
+null	
+o	Kit
+p	Mixed material
+r	Models Realia
+s	Serial
+t	Thesis manuscipt
+v	Microform
+	
+
+Name: BIB LVL (BCode 1)
+
+Valid Codes: 
+-
+ 
+a	MONOG PART
+b	SERIAL PART
+c	COLLECTION
+d	SUBUNIT
+i	INTEGRAT RESC
+m	MONOGRAPH
+s	SERIAL
+z	NOT LIB MAT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                     Page 1

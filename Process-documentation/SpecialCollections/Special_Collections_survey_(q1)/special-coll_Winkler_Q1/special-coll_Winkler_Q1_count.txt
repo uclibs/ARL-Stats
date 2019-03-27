@@ -1,0 +1,30 @@
+Tally run on 2018-10-12
+q1_set2_Winkler_audio_pass1.csv : 8
+q1_set2_Winkler_eresource_pass1.csv : 1
+q1_set2_Winkler_graphic_pass1.csv : 2
+q1_set2_Winkler_mono_pass1.csv : 9186
+q1_set2_Winkler_projected_pass1.csv : 181
+q1_set2_Winkler_serial_pass1.csv : 660
+q1_set3_Winkler_mixed_pass1.csv : 42
+q1_set3_Winkler_mono_pass1.csv : 21
+q1_set3_Winkler_serial_pass1.csv : 18
+total: 10765
+
+q1_set2_Winkler_realia_pass1.csv : 643
+q1_set3_Winkler_realia_pass1.csv : 3
+
+
+Tally run on 2018-10-12
+q1_set2_Winkler_audio_pass1.csv	8
+q1_set2_Winkler_eresource_pass1.csv	1
+q1_set2_Winkler_graphic_pass1.csv	2
+q1_set2_Winkler_mono_pass1.csv	9186
+q1_set2_Winkler_projected_pass1.csv	181
+q1_set2_Winkler_serial_pass1.csv	660
+q1_set3_Winkler_mixed_pass1.csv	42
+q1_set3_Winkler_mono_pass1.csv	21
+q1_set3_Winkler_serial_pass1.csv	18
+total: 10765
+
+q1_set2_Winkler_realia_pass1.csv	643
+q1_set3_Winkler_realia_pass1.csv	3

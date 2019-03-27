@@ -1,0 +1,76 @@
+/*
+
+Question 1, set 2, Oesper 2017-2018
+
+*/
+
+SELECT p.dedupTitle--, p.Location 
+
+FROM
+
+(SELECT ARRAY_TO_STRING(ARRAY[t.field_content, a.field_content, alt_title.field_content, uni.field_content, ed.field_content], ' ') AS dedupTitle ,
+
+string_agg(bibloc.location_code, ' ') AS Location
+
+    FROM sierra_view.bib_view i
+
+    LEFT JOIN sierra_view.varfield u ON (i.id = u.record_id AND (u.marc_tag = '856' OR u.marc_tag = '956'))
+    LEFT JOIN sierra_view.bib_record_item_record_link itemlink ON (i.id = itemlink.bib_record_id) -- Bib/item linking table
+    LEFT JOIN sierra_view.bib_record_holding_record_link checlink ON (i.id = checlink.bib_record_id) -- Bib/item linking table
+    LEFT JOIN sierra_view.item_record item ON (itemlink.item_record_id = item.record_id)
+    LEFT JOIN sierra_view.holding_record holding ON (checlink.holding_record_id = holding.record_id)
+    LEFT JOIN sierra_view.holding_record_location holdingloc ON (checlink.holding_record_id = holdingloc.holding_record_id)
+ --Edit bib format here and run query once for each
+    JOIN sierra_view.bib_record_location bibloc ON (i.id = bibloc.bib_record_id AND (i.bcode2 = 'i' OR i.bcode2 = 'j')) --for audio
+    -- JOIN sierra_view.bib_record_location bibloc ON (i.id = bibloc.bib_record_id AND (i.bcode2 = 'm')) --for eresources
+    -- JOIN sierra_view.bib_record_location bibloc ON (i.id = bibloc.bib_record_id AND (i.bcode2 = 'k')) --for graphic
+    -- JOIN sierra_view.bib_record_location bibloc ON (i.id = bibloc.bib_record_id AND (i.bcode2 = 'a' OR i.bcode2 = 't')) --for mono
+    -- JOIN sierra_view.bib_record_location bibloc ON (i.id = bibloc.bib_record_id AND (i.bcode2 = 'g')) --for projected
+    -- JOIN sierra_view.bib_record_location bibloc ON (i.id = bibloc.bib_record_id AND (i.bcode2 = 's')) --for serials
+    
+    --JOIN sierra_view.bib_record_location bibloc ON (i.id = bibloc.bib_record_id AND (i.bcode2 = 'e' OR i.bcode2 = 'f')) --for map (no data to export)
+    --JOIN sierra_view.bib_record_location bibloc ON (i.id = bibloc.bib_record_id AND i.bcode2 = 'p') --for mixed (no data to export)
+    --JOIN sierra_view.bib_record_location bibloc ON (i.id = bibloc.bib_record_id AND (i.bcode2 = 'c' OR i.bcode2 = 'd')) --for scores (no data to export)
+
+
+    LEFT JOIN sierra_view.varfield t ON (i.id = t.record_id AND t.marc_tag = '245')
+    LEFT JOIN sierra_view.varfield a ON (i.id = a.record_id AND a.varfield_type_code = 'a')
+    LEFT JOIN sierra_view.varfield alt_title ON (i.id = alt_title.record_id AND alt_title.marc_tag = '240')
+    LEFT JOIN sierra_view.varfield uni ON (i.id = uni.record_id AND uni.marc_tag = '130')
+    LEFT JOIN sierra_view.varfield ed ON (i.id = ed.record_id AND ed.marc_tag = '250')
+
+    WHERE 
+
+    (checlink.holding_record_id > 0 OR itemlink.item_record_id > 0)
+    -- Many formats will require only 1 pass
+     AND i.record_num >= '1000000' 
+    
+    -- Formats that require multiple passes (e.g., monographs) patterns
+     --AND i.record_num <= '2000000' -- pass 1
+     --AND i.record_num >= '2000001' -- pass 2
+     --AND i. record_num < '4000000'
+     --AND i.record_num >= '4000000' -- pass 3
+     --AND i.record_num <  '5000000' 
+     --AND i.record_num >= '5000000' -- pass 4
+
+    -- OR
+    -- AND i.record_num <= '3000000' -- pass 1
+    -- AND i.record_num >= '3000001' -- pass 2
+    -- AND i.record_num <  '5000000'
+    -- AND i.record_num >= '5000000' -- pass 3
+    
+    --AND (item.location_code LIKE '%in%' OR holdingloc.location_code LIKE '%in%')
+    AND i.bcode3 != 'd' AND i.bcode3 != 's'
+  
+    AND i.cataloging_date_gmt <= '2018-06-30' -- cat date falls on or before last day of fiscal year
+    AND u.field_content is NULL
+    AND (item.location_code LIKE 'ucbb%'
+      OR holdingloc.location_code LIKE 'ucbb%'
+      )
+
+GROUP BY dedupTitle 
+
+) p
+
+
+--LIMIT 100;

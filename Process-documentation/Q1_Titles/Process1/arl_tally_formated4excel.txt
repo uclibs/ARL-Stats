@@ -1,0 +1,52 @@
+Tally run on 2018-10-16
+
+1_monographs/1_monographs_17_18_q1_count.txt
+1057296	set1+set3 deduped
+1806648	set2 deduped
+71566	set3 deduped
+
+2_serials/2_serials_17_18_q1_count.txt
+11751	set1+set3 deduped
+44242	set2 deduped
+11750	set3 deduped
+
+3_scores/3_scores_17_18_q1_count.txt
+446	set1+set3 deduped
+79844	set2 deduped
+82	set3 deduped
+
+4_maps/4_maps_17_18_q1_count.txt
+6431	set1+set3 deduped
+39460	set2 deduped
+327	set3 deduped
+
+5_audio/5_audio_17_18_q1_count.txt
+29	set1+set3 deduped
+58835	set2 deduped
+12	set3 deduped
+
+6_projected/6_projected_17_18_q1_count.txt
+58920	set1+set3 deduped
+15176	set2 deduped
+75	set3 deduped
+
+7_graphic_2d_object/7_graphic_2d_object_17_18_q1_count.txt
+335	set1+set3 deduped
+678	set2 deduped
+11	set3 deduped
+
+8_eresource/8_eresource_17_18_q1_count.txt
+1739	set1+set3 deduped
+1144	set2 deduped
+178	set3 deduped
+
+9_mixed/9_mixed_17_18_q1_count.txt
+445	set1+set3 deduped
+29	set2 deduped
+439	set3 deduped
+
+10_micro/10_micro_17_18_q1_count.txt
+0	set1+set3 deduped
+6	set2 deduped
+0	set3 deduped
+3267894
