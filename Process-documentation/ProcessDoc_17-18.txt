@@ -1,5 +1,7 @@
 Once again, record a procedure document for the whole ARL Collection Stats process
 
+As nearly as possible, run PostgreSQL queries in UCLID on July 1, or in the first week of July to provide a snapshot of the catalog at fiscal year’s end and eliminate the need to account for withdrawn or deleted records. 
+
 Required programs
 	PGAdmin (web)
 	PowerShell (or bash?)
@@ -7,183 +9,50 @@ Required programs
 
 Documents and files for each annual reporting period (fiscal year) are stored in a shared folder. 
 The folder for reporting period 2017-2018 is on UC Box. 
-C:\Users\crawfotj.AD\Box Sync\arl\17-18
+C:\Users\crawfotj.AD\Box Sync\arl\17-18\
+
 ARL annual questionnaire, Collection Stats (questions 1-4) 
 	Q1 Titles (all formats)
 	Q2 Vols. held (traditional definition of "vol")
 	Q2 Footnotes ... Adjustments, and list of our 003 Collections
 	Q4 EBooks
+	
+Bill wrote scripts to automate portions of the process; Bill (James?) wrote a Ruby script to compile the tally for question 1. Sean and I created the original postres queries from UCLID Saved Searches.
 
-Bill wrote scripts to automate portions of the process; Bill (James?) wrote a Ruby script to compile the tally for question 1. Sean and I created the original postres queries from UCLID Saved Searches
 
 Set up documents and spreadsheets; copy and rename docs and files from preceding year.
 
 List of folders containing various spreadsheets and documents from 17-18
 
-C:\Users\crawfotj.AD\Box Sync\arl\17-18
-	\ARL_17-18_Worksheet-Calculations.docx 
-		Worksheet doc for Dan Q1 Titles, Q2 Vols. (and Footnote), Q4 Ebooks:
-	\ARL_17-18_SpecCol_q1+q2.docx	
-		Worksheet doc for Dan Special Collections Q1 and Q2:
-
-
-	\ARL_documents (folder) 
-		\17arlstatistics fillable.pdf (also used for 17-18)
-		\17instruct.pdf
-		\17statisfaq.pdf
-		
-	\Calculation Spreadsheets (folder of spreadsheets)
-		\arl17-18_Q1-2_Jeff's_Calculations.xlsx
-		\arl17-18_SpecCol_totals.xlsx
-		\Q2_footnote.xlsx
-		\buar_archival_boxes.xlsx
-
-
-
-
-	\Process_ARL11-12_Q1-Titles_Strategy.docx
-	\ProcessDoc_15-16.txt
-	\ProcessDoc_17-18.txt
+C:\Users\crawfotj.AD\Box Sync\arl\17-18\
+	ARL_17-18_Worksheet-Calculations.docx 
+		Worksheet document covering Q1 Titles, Q2 Vols. (and Footnote), Q4 Ebooks.
+	ARL_17-18_SpecCol_q1+q2.docx	
+		Worksheet document covering Special Collections Q1 and Q2
+	ProcessDoc_17-18.txt
 		Instructions for local process
 
+	ARL_documents (folder)\
+		17arlstatistics fillable.pdf (also used for 17-18)
+		17instruct.pdf
+		17statisfaq.pdf
+		
+	Calculation Spreadsheets (folder of spreadsheets)\
+		arl17-18_Q1-2_Jeff's_Calculations.xlsx
+		arl17-18_SpecCol_totals.xlsx
+		Q2_footnote.xlsx
+		buar_archival_boxes.xlsx
+
+	Q1 (folder)
+	Q2 (folder)
+	Q4 (folder)
+	Special_Collections (folder)
+	
 
 
-Q1 Process: 
-create separate subfolders by format, each folder includes 3 SQL (queries)
-process the queries in PGAdmin (online) 
-write results for each query to .csv files in respective format folder
-use context "Git Bash Here" on folder, and ./Process.sh to produce "count.txt" files
-	remember to edit the write to line, it's important to be consistent in csv naming conventions 
-
-After running queries and process in all format folders, run (double click) "count_arl-q1.rb" to collect totals and write to "arl-tally.txt"
-	line 5: "require date"   EDIT date in line 40
-Add the info from "arl-tally" to Calculations spreadsheet
-
-Q1 Folders
+Q1 Process:
 C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q1
-C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q1\Process1
-		\process.sh 	(edit date range for outfile name)
-		\count_arl_q1.rb (edit date range in line 40)
-		\arl_tally.txt
-		\arl_tally_formated4excel.txt
-		
-		\1_monographs (folder)
-			\mono_arl_17-18_q1_set1.sql (check format code and set date range)
-			\mono_arl_17-18_q1_set2.sql (check format code and set date range)
-			\mono_arl_17-18_q1_set3.sql (check format code and set date range)
-			
-			\q1_set1_mono_pass1.csv (may require multiple passes)
-		 	\q1_set2_mono_pass1.csv (may require multiple passes)
-			\q1_set3_mono_pass1.csv (may require multiple passes)
-			
-			\process.sh  (edit date range for outfile name)
-			\1_monographs_17_18_q1_count.txt
-			
-		\2_serials
-			\ser_arl_17-18_q1_set1.sql (check format code and set date range)
-			\ser_arl_17-18_q1_set1.sql (check format code and set date range)
-			\ser_arl_17-18_q1_set1.sql (check format code and set date range)
-			
-			\q1_set1_ser_pass1.csv (may require multiple passes)
-			\q1_set2_ser_pass1.csv (may require multiple passes)
-			\q1_set3_ser_pass1.csv (may require multiple passes)
-			
-			\process.sh  (edit date range for outfile name)
-			\2_serials_17_18_q1_count.txt
-					
-		\3_scores
-			\score_arl_17-18_q1_set1.sql (check format code and set date range)
-			\score_arl_17-18_q1_set2.sql (check format code and set date range)
-			\score_arl_17-18_q1_set3.sql (check format code and set date range)
-			
-			\q1_set1_score_pass1.csv
-			\q1_set2_score_pass1.csv
-			\q1_set3_score_pass1.csv
-			
-			\process.sh
-			\3_scores_17_18_q1_count.txt
-			
-		\4_maps
-			\map_arl_17-18_q1_set1.sql (check format code and set date range)
-			\map_arl_17-18_q1_set2.sql (check format code and set date range)
-			\map_arl_17-18_q1_set3.sql (check format code and set date range)
-
-			\q1_set1_map_pass1.csv (may require multiple passes)
-			\q1_set2_map_pass1.csv
-			\q1_set3_map_pass1.csv
-
-			\process.sh (edit date range for outfile name)
-			\4_maps_17_18_q1_count.txt
-		
-		\5_audio
-			\audio_arl_17-18_q1_set1.sql (check format code and set date range)
-			\audio_arl_17-18_q1_set2.sql (check format code and set date range)
-			\audio_arl_17-18_q1_set3.sql (check format code and set date range)
-
-			\q1_set1_audio_pass1.csv
-			\q1_set2_audio_pass1.csv
-			\q1_set3_audio_pass1.csv
-
-			\process.sh (edit date range for outfile name)
-			\5_audio_17_18_q1_count.txt
-		
-		\6_projected
-			\proj_arl_17-18_q1_set1.sql (check format code and set date range)
-			\proj_arl_17-18_q1_set2.sql (check format code and set date range)
-			\proj_arl_17-18_q1_set3.sql (check format code and set date range)
-
-			\q1_set1_projected_pass1.csv
-			\q1_set2_projected_pass1.csv
-			\q1_set3_projected_pass1.csv
-
-			\process.sh (edit date range for outfile name)
-			\6_projected_17_18_q1_count.txt
-		
-		\7_graphic _2d_object
-			\graphic_arl_17-18_q1_set1.sql (check format code and set date range)
-			\graphic_arl_17-18_q1_set2.sql (check format code and set date range)
-			\graphic_arl_17-18_q1_set3.sql (check format code and set date range)
-
-			\q1_set1_graphic_pass1.csv
-			\q1_set2_graphic_pass1.csv
-			\q1_set3_graphic_pass1.csv
-
-			\process.sh (edit date range for outfile name)
-			\7_graphic_2d_object_17_18_q1_count.txt
-		
-		\8_eresource
-			\eresource_arl_17-18_q1_set1.sql (check format code and set date range)
-			\eresource_arl_17-18_q1_set2.sql (check format code and set date range)
-			\eresource_arl_17-18_q1_set3.sql (check format code and set date range)
-
-			\q1_set1_eresource_pass1.csv
-			\q1_set2-eresource_pass1.csv
-			\q1_set3_eresource_pass1.csv
-
-			\process.sh (edit date range for outfile name)
-			\8_eresource_17_18_q1_count.txt
-
-		\9_mixed
-			\mixed_arl_17-18_q1_set1.sql (check format code and set date range)
-			\mixed_arl_17-18_q1_set2.sql (check format code and set date range)
-			\mixed_arl_17-18_q1_set3.sql (check format code and set date range)
-
-			\q1_set1_mixed_pass1.csv
-			\q1_set2_mixed_pass1.csv
-			\q1_set3_mixed_pass1.csv
-
-			\process.sh (edit date range for outfile name)
-			\9_mixed_17_18_q1_count.txt
-
-		\10 micro
-			\micro_arl_17-18_q1_set2.sql
-			\micro_arl_17-18_q1_set3.sql
-
-			\q1_set2_micro_pass1.csv (check format code and set date range)
-			\q1_set3_micro_pass1.csv (check format code and set date range)
-
-			\process.sh (edit date range for outfile name)
-			\10_micro_17_18_q1_count.txt
+	see document "ARL Statistics - Question 1 procedure"
 
 	
 Q2 Process
