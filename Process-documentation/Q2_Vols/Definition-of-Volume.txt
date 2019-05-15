@@ -1,0 +1,25 @@
+Question 2. Volumes in Library. Use the ANSI/NISO Z39.7-2004 definition for volume as follows:
+
+a single physical unit of any printed, typewritten, handwritten, mimeographed, or processed work, distinguished from other units by a separate binding, encasement, portfolio, or other clear distinction, which has been cataloged, classified, and made ready for use, and which is typically the unit used to charge circulation transactions. Either a serial volume is bound, or it comprises the serial issues that would be bound together if the library bound all serials.
+
+Include duplicates and bound volumes of periodicals. For purposes of this questionnaire, unclassified bound serials arranged in alphabetical order are considered classified. 
+
+Exclude microforms, maps, nonprint materials, and uncataloged items. 
+Exclude electronic serials and other virtual serial volumes. These are reported in the title count (Question 1). If any of these items cannot be excluded, please provide an explanatory footnote.
+
+Include government document volumes that are accessible through the library's catalogs regardless of whether they are separately shelved. 
+"Classified" includes documents arranged by Superintendent of Documents, CODOC, or similar numbers. 
+"Cataloged" includes documents for which records are provided by the library or downloaded from other sources into the library's card or online catalogs. Documents should, to the extent possible, be counted as they would if they were in bound volumes (e.g., 12 issues of an annual serial would be one or two volumes). 
+
+Title and piece counts should not be considered the same as volume counts. If a volume count has not been kept, it may be estimated through sampling a representative group of title records and determining the corresponding number of volumes, then extrapolating to the rest of the collection. As an alternative, an estimate may be made using the following formulae:
+
+52 documents pieces per foot
+10 "traditional" volumes per foot
+5.2 documents pieces per volume
+
+Include e-book units, as long as these e-books are owned or leased and have been cataloged by your library. Include electronic books purchased through vendors such as NetLibrary '' or Books 24x7, and e-books that come as part of aggregate services. Include individual titles of e-book sets that are treated as individual reference sources. Include locally digitized electronic books and electronic theses and dissertations. 
+
+Provide a FOOTNOTE reporting the products and the number of titles in a note.
+
+Include volumes purchased collectively where the cost is shared at the time of purchase.
+

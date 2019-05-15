@@ -8,47 +8,40 @@ Required programs
 	Ruby
 
 Documents and files for each annual reporting period (fiscal year) are stored in a shared folder. 
-The folder for reporting period 2017-2018 is on UC Box. 
-C:\Users\crawfotj.AD\Box Sync\arl\17-18\
+The folder for reporting period 2017-2018 is on [UC Box] 
+[C:\Users\crawfotj.AD\Box Sync\arl\17-18\ ]
 
-ARL annual questionnaire, Collection Stats (questions 1-4) 
-	Q1 Titles (all formats)
-	Q2 Vols. held (traditional definition of "vol")
-	Q2 Footnotes ... Adjustments, and list of our 003 Collections
-	Q4 EBooks
+ARL annual questionnaire, Collection Stats (questions 1-4).  Folder contains documents and subfolders as illustrated in the example below:
 	
 Bill wrote scripts to automate portions of the process; Bill (James?) wrote a Ruby script to compile the tally for question 1. Sean and I created the original postres queries from UCLID Saved Searches.
+*** SET UP FOLDER STRUCTURE, FILES, SPREADSHEETS, AND DOCUMENTS. It is necessary to maintain consistency in structure and in naming conventions for the Postgres queries and the processing scripts to function accurately,  One method is to copy and paste from the preceding year's folder, renaming folders and contents as necessary. ***
 
-
-Set up documents and spreadsheets; copy and rename docs and files from preceding year.
-
-List of folders containing various spreadsheets and documents from 17-18
+EXAMPLE: List of folders containing FY 17-18 spreadsheets and documents from 17-18
 
 C:\Users\crawfotj.AD\Box Sync\arl\17-18\
-	ARL_17-18_Worksheet-Calculations.docx 
-		Worksheet document covering Q1 Titles, Q2 Vols. (and Footnote), Q4 Ebooks.
-	ARL_17-18_SpecCol_q1+q2.docx	
-		Worksheet document covering Special Collections Q1 and Q2
-	ProcessDoc_17-18.txt
-		Instructions for local process
+  ARL_17-18_Worksheet-Calculations.docx 
+	(Worksheet document covering Q1 Titles, Q2 Vols. (and Footnote), Q4 Ebooks.
+  ARL_17-18_SpecCol_q1+q2.docx	
+	(Worksheet document covering Special Collections Q1 and Q2)
+  ProcessDoc_17-18.txt (Instructions for local process)
 
-	ARL_documents (folder)\
-		17arlstatistics fillable.pdf (also used for 17-18)
-		17instruct.pdf
-		17statisfaq.pdf
-		
-	Calculation Spreadsheets (folder of spreadsheets)\
-		arl17-18_Q1-2_Jeff's_Calculations.xlsx
-		arl17-18_SpecCol_totals.xlsx
-		Q2_footnote.xlsx
-		buar_archival_boxes.xlsx
+  ARL_documents (folder)\
+	17arlstatistics fillable.pdf (also used for 17-18)
+	17instruct.pdf
+	17statisfaq.pdf
 
-	Q1 (folder)
-	Q2 (folder)
-	Q4 (folder)
-	Special_Collections (folder)
+  Calculation Spreadsheets (folder of spreadsheets)\
+	arl17-18_Q1-2_Jeff's_Calculations.xlsx
+	arl17-18_SpecCol_totals.xlsx
+	Q2_footnote.xlsx
+	buar_archival_boxes.xlsx
+
+  Q1 (Titles folder (all formats))\
+  Q2 (Vols held folder (vol as defind in ARL instructions))\
+  Q2 (Vols-Footnotes (footnote_003_Batch-ebook-collections) folder)
+  Q4 (EBooks folder)\
+  Special_Collections (folder)\
 	
-
 
 Q1 Process:
 C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q1
@@ -57,10 +50,16 @@ C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q1
 	
 Q2 Process
 C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q2
-	The search for UL Q2 now resides on http://lucy.libraries.uc.edu/qc/arl.html 
-
-	It includes all relevant I Types, old process pts. 1, 2 (99), and 3 (22 and 72) 
-	N.B.It does include I Type 22, 72, 99
+	The search for UL Q2 currently resides on http://data.libraries.uc.edu/qc/arl.html
+	The query results include only Univ. Libs, UCBA, and Clermont
+	
+	for the text of the query see: \q2_all.sh
+	
+	Note: "Vols held" is defined in the ARL Survey Instructions. The query includes item record IType codes for print monographs, serials, scores, print materials bound with accompanying media, electronic monographs, and scores; electronic serials are excluded. 
+	
+	Save query results as <q2_yyyy-runMM-DD_results.txt>
+	Copy and paste from <q2...results.txt> to "Q1-2_Jeff’s_Calculations" EXCEL Workbook, sheet 2 "yy-yy-q2 vols" 
+	
 
 Q2 Footnote
 C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q2\003 Batch collections footnote
@@ -70,7 +69,9 @@ C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q2\003 Batch collections footnote
 	\q2_footnote_17-18_003+730_mono_pass1.xlsx
 
 	join output files, use uniq -c to count
-	to prepare fo31otnote; transfer info to Calculations spreadsheet
+	to prepare fo31otnote; 
+	
+	transfer info to Calculations spreadsheet
 	C:\Users\crawfotj.AD\Box Sync\arl\17-18\Calculation Spreadsheets/q2_footnote.xlsx
 		follow pattern from previous year
 
