@@ -1,0 +1,15 @@
+Former name					New name
+arl17-18_Q1-2_Jeff's_Calculations.xlsx		arl17-18_Q1-2_SummaryCalculations.xlsx
+
+arl17-18_Calculations.xlsx			arl17-18_Q1-4_SummaryCalculations.xlsx
+
+arl17-18_SpecCol_totals.xlsx			arl17-18_SpecCol_Calculations.xlsx
+
+buar_archival_boxes.xlsx			arl17-18_SpecCol-ARB-archival_boxes.xlsx
+
+
+
+
+ARL_17-18_Worksheet-Calculations.docx		arl17-18_Q1-4.docx
+
+ARL_17-18_SpecCol_q1+q2.docx			arl17-18_SpecCol_Q1-Q2.docx

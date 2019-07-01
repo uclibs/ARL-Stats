@@ -1,79 +1,95 @@
-Once again, record a procedure document for the whole ARL Collection Stats process
+Procedure document for the complete ARL Collection Stats process
 
-As nearly as possible, run PostgreSQL queries in UCLID on July 1, or in the first week of July to provide a snapshot of the catalog at fiscal year’s end and eliminate the need to account for withdrawn or deleted records. 
+The questionnaire assumes a fiscal year ending June 30, 2018 (July 1, 2017 - June 30, 2018). As nearly as possible, run PostgreSQL queries in UCLID on July 1, or in the first week of July to provide a snapshot of the catalog at fiscal year’s end and eliminate the need to account for withdrawn or deleted records.
 
 Required programs
 	PGAdmin (web)
 	PowerShell (or bash?)
 	Ruby
 
-Documents and files for each annual reporting period (fiscal year) are stored in a shared folder. 
+Documents and files for each annual reporting period (fiscal year) are stored in a shared folder
 The folder for reporting period 2017-2018 is on [UC Box] 
 [C:\Users\crawfotj.AD\Box Sync\arl\17-18\ ]
-
 ARL annual questionnaire, Collection Stats (questions 1-4).  Folder contains documents and subfolders as illustrated in the example below:
 	
-Bill wrote scripts to automate portions of the process; Bill (James?) wrote a Ruby script to compile the tally for question 1. Sean and I created the original postres queries from UCLID Saved Searches.
-*** SET UP FOLDER STRUCTURE, FILES, SPREADSHEETS, AND DOCUMENTS. It is necessary to maintain consistency in structure and in naming conventions for the Postgres queries and the processing scripts to function accurately,  One method is to copy and paste from the preceding year's folder, renaming folders and contents as necessary. ***
+	Bill wrote scripts to automate portions of the process; Bill (James?) wrote a Ruby script to compile the tally for question 1. Sean and I created the original postres queries from UCLID Saved Searches.
 
-EXAMPLE: List of folders containing FY 17-18 spreadsheets and documents from 17-18
+*** SET UP FOLDER STRUCTURE, FILES, SPREADSHEETS, AND DOCUMENTS. It is necessary to maintain consistency in structure and in naming conventions for the Postgres queries and the processing scripts to function accurately,  One method is to copy and paste from the preceding year's folder, renaming folders and editing contents as necessary. 
 
-C:\Users\crawfotj.AD\Box Sync\arl\17-18\
-  ARL_17-18_Worksheet-Calculations.docx 
-	(Worksheet document covering Q1 Titles, Q2 Vols. (and Footnote), Q4 Ebooks.
-  ARL_17-18_SpecCol_q1+q2.docx	
-	(Worksheet document covering Special Collections Q1 and Q2)
-  ProcessDoc_17-18.txt (Instructions for local process)
+BE SURE TO CHECK "DATE RANGE" IN EVERY QUERY, EDIT AS NEDEEDED. 
+***
 
-  ARL_documents (folder)\
-	17arlstatistics fillable.pdf (also used for 17-18)
-	17instruct.pdf
-	17statisfaq.pdf
+	EXAMPLE: List of folders containing FY 17-18 spreadsheets and documents from 17-18
 
-  Calculation Spreadsheets (folder of spreadsheets)\
-	arl17-18_Q1-2_Jeff's_Calculations.xlsx
-	arl17-18_SpecCol_totals.xlsx
-	Q2_footnote.xlsx
-	buar_archival_boxes.xlsx
+	C:\Users\crawfotj.AD\Box Sync\arl\17-18\
+	  arl17-18_q1-4.docx 
+		(Worksheet document covering q1 Titles, q2 Vols. (and Footnote), q4 Ebooks.
+	  arl17-18_SpecCol_q1-2.docx	
+		(Worksheet document covering Special Collections q1 and q2)
+	  ProcessDoc_17-18.txt (Instructions for local process)
 
-  Q1 (Titles folder (all formats))\
-  Q2 (Vols held folder (vol as defind in ARL instructions))\
-  Q2 (Vols-Footnotes (footnote_003_Batch-ebook-collections) folder)
-  Q4 (EBooks folder)\
-  Special_Collections (folder)\
+	  ARL_documents (folder)\
+		17arlstatistics fillable.pdf (also used for 17-18)
+		17instruct.pdf
+		17statisfaq.pdf
+
+	  Calculation Spreadsheets (folder of spreadsheets)\
+		arl17-18_q1-2_SummaryCalculations.xlsx
+		arl17-18_q1-4_SummaryCalculations.xlsx
+		arl17-18_SpecCol_totals.xlsx
+		arl17-18_SpecCol-ARB-archival_boxes.xlsx
+		Q2_footnote.xlsx
+		
+
+	  Q1_Titles (folder (all formats))\
+	  Q2_Vols held (folder (vol as defind in ARL instructions))\
+	  Q2-Vols-Footnotes (footnote_003_Batch-ebook-collections) folder)
+	  Q4_EBooks (folder)\
+	  Special_Collections (folder)\
 	
+
 
 Q1 Process:
 C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q1
-	see document "ARL Statistics - Question 1 procedure"
-
+	follow precedure outlined in document "arl_q1-Titles_Strategy (2019).docx"
+	
+	Copy and paste format totals from "arl17-18_q1-2_SummaryCalculations.xlsx" sheet to "arl17-18_q1-4_SummaryCalculations.xlsx" sheet "q1 Titles" following established pattern
 	
 Q2 Process
 C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q2
 	The search for UL Q2 currently resides on http://data.libraries.uc.edu/qc/arl.html
-	The query results include only Univ. Libs, UCBA, and Clermont
+	The query results include only Univ. Libs, UCBA, and Clermont; 	for the text of the query see: \q2_all.sh
 	
-	for the text of the query see: \q2_all.sh
+	Note: "Vols held" is defined in the ARL Survey Instructions. The query includes item record IType codes for print monographs, serials, scores, print materials bound with accompanying media, electronic monographs, and scores; electronic serials are excluded.
 	
-	Note: "Vols held" is defined in the ARL Survey Instructions. The query includes item record IType codes for print monographs, serials, scores, print materials bound with accompanying media, electronic monographs, and scores; electronic serials are excluded. 
+	On the web form, enter the Year as 2018 for the 2017/2018 reporting period.
+	Save query results as <q2_2018-run10-05_results.txt>
+	Copy and paste from <q2...results.txt> to "arl17-18_q1-2_SummaryCalculations.xlsx" sheet 2 "17-18 q2 vols" following established pattern
 	
-	Save query results as <q2_yyyy-runMM-DD_results.txt>
-	Copy and paste from <q2...results.txt> to "Q1-2_Jeff’s_Calculations" EXCEL Workbook, sheet 2 "yy-yy-q2 vols" 
-	
+	The total will be copied to "arl17-18_q1-4_SummaryCalculations.xlsx" in a later step.
+
 
 Q2 Footnote
 C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q2\003 Batch collections footnote
-	\q2_footnote_17-18-003-ER+730-OCU-2.sql (requires multiple passes)
+	\q2_footnote_17-18-003-ER+730-OCU-2.sql (may require multiple passes)
 	
-	download results to .csv or copy+paste to .xlsx
-	\q2_footnote_17-18_003+730_mono_pass1.xlsx
+	download results to .csv or copy+paste to .xlsx 
+	<CTRL A>, <CTRL C>, <CTRL V> to "arl17-18_q2_footnote.xlsx" sheet 1, rename sheet "Data Output"
 
-	join output files, use uniq -c to count
-	to prepare fo31otnote; 
+	to prepare footnote: in Excel, copy "Data Output" sheet to new sheet, rename "Prep  for uniq" 
+	Delete columns A-B-C and E, retaining only text of 003 code, and text of 730 uniform title
+	Sort on column A expanded selection. Save sorted columns to text file, use uniq -c to count
+------------	
+	transfer info to two spreadsheets
+	C:\Users\crawfotj.AD\Box Sync\arl\17-18\Calculation spreadsheets
 	
-	transfer info to Calculations spreadsheet
+	\arl17-18_Q1-2_Jeff’s_Calculations" EXCEL Workbook, sheet 2 "17-18 q2 vols"
+	
+	
+	C:\Users\crawfotj.AD\Box Sync\arl\17-18\
 	C:\Users\crawfotj.AD\Box Sync\arl\17-18\Calculation Spreadsheets/q2_footnote.xlsx
 		follow pattern from previous year
+------------		
 
 	if the query is not run early in July, may need to adjust for "Pull and replace" collections
 
@@ -82,8 +98,12 @@ Q4 Process
 C:\Users\crawfotj.AD\Box Sync\arl\17-18\Q4
 
 	\arl_17-18_q4.sql
+	
+	copy Data Output to \ebook_count.txt
+	and transfer into to Calculations spreadsheet
+	
 
-	\ebook_count.txt
+
 
 
 Separate questionnaires for Special Collections. 

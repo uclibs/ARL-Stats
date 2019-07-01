@@ -14,3 +14,9 @@ ARL 14-15
 
 ARL 15-16
 1,019,440 rows retrieveds
+
+ARL 16-17 
+1,057,400 rows retrieved
+
+ARL 17-18 
+1,069,689 rows affected.
